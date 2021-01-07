@@ -43,9 +43,6 @@ export default class Carddetail extends Component {
                 </Card.Content>
                 <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
                 <Card.Content textAlign={"center"}>
-                    {/* <Card.Meta>
-                        <span className='date'>Joined in 2015</span>
-                    </Card.Meta> */}
                     <Card.Description>
                         Current Count: {this.state.count}
                     </Card.Description>
