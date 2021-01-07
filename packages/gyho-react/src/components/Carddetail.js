@@ -36,9 +36,7 @@ export default class Carddetail extends Component {
         return (
             <Card>
                 <Card.Content>
-                    <Button floated='left'>
-                        <Icon name='x'></Icon>
-                    </Button>
+                    <Button circular floated='left' icon='x' />
                     <Card.Header textAlign={"right"}>Video's title</Card.Header>
                 </Card.Content>
                 <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
@@ -48,12 +46,8 @@ export default class Carddetail extends Component {
                     </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                    <Button color='red' floated="left" onClick={(e) => this.decrement(e)}>
-                        <Icon name='minus'></Icon>
-                    </Button>
-                    <Button color='green' floated="right" onClick={(e) => this.increment(e)}>
-                        <Icon name='plus'></Icon>
-                    </Button>
+                    <Button color='red' floated="left" icon='minus' onClick={(e) => this.decrement(e)} />
+                    <Button color='green' floated="right" icon='plus' onClick={(e) => this.increment(e)} />
                 </Card.Content>
             </Card>
         );
