@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Carddetail from "./components/Carddetail"
-import "bootstrap/dist/css/bootstrap.min.css";
+import CardDetail from "./components/CardDetail"
+import 'semantic-ui-css/semantic.min.css'
 
 class App extends React.Component {
     render() {
         return (
-            <Carddetail></Carddetail>
+            <CardDetail></CardDetail>
         )
     }
 }
