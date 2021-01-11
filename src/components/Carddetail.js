@@ -3,7 +3,7 @@ import { Button, Card, Icon, Image } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css'
 
 
-export default class Carddetail extends Component {
+export default class CardDetail extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,7 +12,6 @@ export default class Carddetail extends Component {
     }
 
     // change code below this line
-
     increment() {
         this.setState({
             count: this.state.count + 1
