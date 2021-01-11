@@ -12,7 +12,6 @@ export default class CardDetail extends Component {
     }
 
     // change code below this line
-
     increment() {
         this.setState({
             count: this.state.count + 1
