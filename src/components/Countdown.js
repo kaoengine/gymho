@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Card, Container, Message } from "semantic-ui-react";
+import { Button, Container } from "semantic-ui-react";
 
 class Countdown extends Component {
     state = {
@@ -59,7 +59,7 @@ class Countdown extends Component {
         let hours = ("0" + Math.floor((timerTime / 3600000) % 60)).slice(-2);
 
         return (
-            <Card className="Countdown">
+            <Container className="Countdown">
                 <Container className="Up-button">
                     <Button color="green" icon='angle double up' onClick={() => this.adjustTimer("incHours")}></Button>
                     <Button color="green" icon='angle up' onClick={() => this.adjustTimer("incMinutes")}></Button>
@@ -88,7 +88,7 @@ class Countdown extends Component {
                     <Button color="red" icon='angle double down' onClick={() => this.adjustTimer("decHours")}></Button>
                     <Button color="red" icon='angle down' onClick={() => this.adjustTimer("decMinutes")}></Button>
                 </Container>
-            </Card>
+            </Container>
         );
     }
 }
