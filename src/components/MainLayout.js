@@ -131,11 +131,11 @@ class MobileContainer extends Component {
             visible={sidebarOpened}
           >
             <Menu.Item as='a' active>
-              Home
+              Pyho
             </Menu.Item>
-            <Menu.Item as='a'>Work</Menu.Item>
-            <Menu.Item as='a'>Company</Menu.Item>
-            <Menu.Item as='a'>Careers</Menu.Item>
+            <Menu.Item as='a'>News</Menu.Item>
+            <Menu.Item as='a'>Activity</Menu.Item>
+            <Menu.Item as='a'>Goal</Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened}>
