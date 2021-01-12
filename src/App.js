@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CardDetail from "./components/Carddetail";
 import CardList from "./components/CardList"
 import MainLayout from "./components/MainLayout"
 import 'semantic-ui-css/semantic.min.css'
