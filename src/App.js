@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import CardDetail from "./components/Carddetail";
 import CardList from "./components/CardList"
+import MainLayout from "./components/MainLayout"
 import 'semantic-ui-css/semantic.min.css'
 
 class App extends React.Component {
     render() {
         return (
-            <CardDetail></CardDetail>
+            <MainLayout></MainLayout>
         )
     }
 }
