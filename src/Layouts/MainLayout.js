@@ -18,7 +18,7 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
-import CardList from './CardList'
+import CardList from '../components/CardList'
 import 'semantic-ui-css/semantic.min.css'
 
 
