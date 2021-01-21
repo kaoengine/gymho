@@ -18,6 +18,9 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
+import CardList from './CardList'
+import 'semantic-ui-css/semantic.min.css'
+
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -35,7 +38,7 @@ const Layout = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='header'
+      content={<CardList />}
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
