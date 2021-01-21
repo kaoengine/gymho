@@ -6,5 +6,7 @@ Wireframes.
 A workflow diagram of the user journey/s.
 Entity Relationship Diagram (ERD).
 Project plan and effort estimation.
+## UI Lib:
+Reactjs + Hook + Saga
 ## UI resouces:
 https://github.com/nadunindunil/awesome-material-ui
