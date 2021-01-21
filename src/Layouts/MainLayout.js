@@ -1,203 +1,152 @@
-/* eslint-disable max-classes-per-file */
-/* eslint-disable react/no-multi-comp */
+import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import CameraIcon from '@material-ui/icons/PhotoCamera';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Grid from '@material-ui/core/Grid';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Link from '@material-ui/core/Link';
 
-import { createMedia } from '@artsy/fresnel'
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Sidebar,
-  Visibility,
-} from 'semantic-ui-react'
-import CardList from '../components/CardList'
-import 'semantic-ui-css/semantic.min.css'
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
-
-const { MediaContextProvider, Media } = createMedia({
-  breakpoints: {
-    mobile: 0,
-    tablet: 768,
-    computer: 1024,
+const useStyles = makeStyles((theme) => ({
+  icon: {
+    marginRight: theme.spacing(2),
   },
-})
+  heroContent: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(8, 0, 6),
+  },
+  heroButtons: {
+    marginTop: theme.spacing(4),
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+  card: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  cardMedia: {
+    paddingTop: '56.25%', // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(6),
+  },
+}));
 
-/* Heads up!
- * Layout uses inline styling, however it's not the best practice. Use CSS or styled
- * components for such things.
- */
-const Layout = ({ mobile }) => (
-  <Container text>
-    <Header
-      as='h1'
-      content={<CardList />}
-      inverted
-      style={{
-        fontSize: mobile ? '2em' : '4em',
-        fontWeight: 'normal',
-        marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
-      }}
-    />
-  </Container>
-)
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-Layout.propTypes = {
-  mobile: PropTypes.bool,
+export default function Album() {
+  const classes = useStyles();
+
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <AppBar position="relative">
+        <Toolbar>
+          <CameraIcon className={classes.icon} />
+          <Typography variant="h6" color="inherit" noWrap>
+            Album layout
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <main>
+        {/* Hero unit */}
+        <div className={classes.heroContent}>
+          <Container maxWidth="sm">
+            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+              Album layout
+            </Typography>
+            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+              Something short and leading about the collection below—its contents, the creator, etc.
+              Make it short and sweet, but not too short so folks don&apos;t simply skip over it
+              entirely.
+            </Typography>
+            <div className={classes.heroButtons}>
+              <Grid container spacing={2} justify="center">
+                <Grid item>
+                  <Button variant="contained" color="primary">
+                    Main call to action
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button variant="outlined" color="primary">
+                    Secondary action
+                  </Button>
+                </Grid>
+              </Grid>
+            </div>
+          </Container>
+        </div>
+        <Container className={classes.cardGrid} maxWidth="md">
+          {/* End hero unit */}
+          <Grid container spacing={4}>
+            {cards.map((card) => (
+              <Grid item key={card} xs={12} sm={6} md={4}>
+                <Card className={classes.card}>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="https://source.unsplash.com/random"
+                    title="Image title"
+                  />
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Heading
+                    </Typography>
+                    <Typography>
+                      This is a media card. You can use this section to describe the content.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      View
+                    </Button>
+                    <Button size="small" color="primary">
+                      Edit
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </main>
+      {/* Footer */}
+      <footer className={classes.footer}>
+        <Typography variant="h6" align="center" gutterBottom>
+          Footer
+        </Typography>
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+          Something here to give the footer a purpose!
+        </Typography>
+        <Copyright />
+      </footer>
+      {/* End footer */}
+    </React.Fragment>
+  );
 }
-
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
-class DesktopContainer extends Component {
-  state = {}
-
-  hideFixedMenu = () => this.setState({ fixed: false })
-  showFixedMenu = () => this.setState({ fixed: true })
-
-  render() {
-    const { children } = this.props
-    const { fixed } = this.state
-
-    return (
-      <Media greaterThan='mobile'>
-        <Visibility
-          once={false}
-          onBottomPassed={this.showFixedMenu}
-          onBottomPassedReverse={this.hideFixedMenu}
-        >
-          <Segment
-            inverted
-            textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
-            vertical
-          >
-            <Menu
-              fixed={fixed ? 'top' : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-              size='large'
-            >
-              <Container>
-                <Menu.Item as='a' active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
-              </Container>
-            </Menu>
-            <Layout />
-          </Segment>
-        </Visibility>
-
-        {children}
-      </Media>
-    )
-  }
-}
-
-DesktopContainer.propTypes = {
-  children: PropTypes.node,
-}
-
-class MobileContainer extends Component {
-  state = {}
-
-  handleSidebarHide = () => this.setState({ sidebarOpened: false })
-
-  handleToggle = () => this.setState({ sidebarOpened: true })
-
-  render() {
-    const { children } = this.props
-    const { sidebarOpened } = this.state
-
-    return (
-      <Media as={Sidebar.Pushable} at='mobile'>
-        <Sidebar.Pushable>
-          <Sidebar
-            as={Menu}
-            animation='overlay'
-            inverted
-            onHide={this.handleSidebarHide}
-            vertical
-            visible={sidebarOpened}
-          >
-            <Menu.Item as='a' active>
-              Pyho
-            </Menu.Item>
-            <Menu.Item as='a'>News</Menu.Item>
-            <Menu.Item as='a'>Activity</Menu.Item>
-            <Menu.Item as='a'>Goal</Menu.Item>
-          </Sidebar>
-
-          <Sidebar.Pusher dimmed={sidebarOpened}>
-            <Segment
-              inverted
-              textAlign='center'
-              style={{ minHeight: 150, padding: '1em 0em' }}
-              vertical
-            >
-              <Container>
-                <Menu inverted pointing secondary size='large'>
-                  <Menu.Item onClick={this.handleToggle}>
-                    <Icon name='sidebar' />
-                  </Menu.Item>
-                </Menu>
-              </Container>
-              <Layout mobile />
-            </Segment>
-
-            {children}
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
-      </Media>
-    )
-  }
-}
-
-MobileContainer.propTypes = {
-  children: PropTypes.node,
-}
-
-const ResponsiveContainer = ({ children }) => (
-  /* Heads up!
-   * For large applications it may not be best option to put all page into these containers at
-   * they will be rendered twice for SSR.
-   */
-  <MediaContextProvider>
-    <DesktopContainer>{children}</DesktopContainer>
-    <MobileContainer>{children}</MobileContainer>
-  </MediaContextProvider>
-)
-
-ResponsiveContainer.propTypes = {
-  children: PropTypes.node,
-}
-
-const MainLayout = () => (
-  <ResponsiveContainer>
-    <Segment style={{ padding: '8em 0em' }} vertical>
-      <Grid container stackable verticalAlign='middle'>
-        <Grid.Row>
-          <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-
-  </ResponsiveContainer>
-)
-
-export default MainLayout
