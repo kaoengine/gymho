@@ -3,7 +3,7 @@
 // ------------------
 //      TAB(T|F)
 // ------------------
-//      MAIN
+//      TABPANEL(MAIN)
 
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -121,13 +121,13 @@ export default function ALayout(props) {
             >
                 <TabPanel value={value} index={0} dir={theme.direction}>
                     Item One
-        </TabPanel>
+                </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
                     Item Two
-        </TabPanel>
+                  </TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction}>
                     Item Three
-        </TabPanel>
+                </TabPanel>
             </SwipeableViews>
             <main>
                 {main}
