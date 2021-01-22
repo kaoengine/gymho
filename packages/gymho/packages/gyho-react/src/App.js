@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import CardDetail from "./components/Carddetail";
-import CardList from "./components/CardList"
-import MainLayout from "./components/MainLayout"
-import 'semantic-ui-css/semantic.min.css'
-
+import ALayout from "./Layouts/ALayout"
+import BLayout from "./Layouts/BLayout"
 class App extends React.Component {
     render() {
         return (
-            <MainLayout></MainLayout>
+            <ALayout></ALayout>
         )
     }
 }
