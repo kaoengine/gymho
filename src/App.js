@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import ExerciseCard from "./components/ExerciseCard";
 
+import ALayout from "./Layouts/ALayout"
+import BLayout from "./Layouts/BLayout"
 class App extends React.Component {
     render() {
         return (
-            <ExerciseCard></ExerciseCard>
+            <ALayout></ALayout>
         )
     }
 }
