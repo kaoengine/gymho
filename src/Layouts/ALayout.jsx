@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '1em',
     },
     decor_wrapper: {
-        background: "white",
+        background: "#fafafa",
     },
     decor_curver: {
         borderBottomRightRadius: '179px 56px',
@@ -93,7 +93,7 @@ export default function ALayout(props) {
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <AppBar className={classes.appBar} position="relative">
+            <AppBar style={{ boxShadow: "none" }} className={classes.appBar} position="relative">
                 <Typography variant="h2" color="inherit" align="center" noWrap>
                     {title || 'ACTIVITY'}
                 </Typography>
