@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 
-import ALayout from "./Layouts/ALayout"
-import BLayout from "./Layouts/BLayout"
+import ActivityPage from "./pages/Activity"
 class App extends React.Component {
     render() {
         return (
-            <ALayout></ALayout>
+            <ActivityPage></ActivityPage>
         )
     }
 }
