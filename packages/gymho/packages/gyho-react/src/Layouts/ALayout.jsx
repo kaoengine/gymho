@@ -103,8 +103,8 @@ export default function ALayout(props) {
                     variant="fullWidth"
                     aria-label="full width tabs example"
                 >
-                    <Tab label="News" {...a11yProps(0)} />
-                    <Tab label="Activity" {...a11yProps(1)} />
+                    <Tab label="Activity" {...a11yProps(0)} />
+                    <Tab label="News" {...a11yProps(1)} />
                     <Tab label="Goal" {...a11yProps(2)} />
                 </Tabs>
                 <CssBaseline />
@@ -120,18 +120,19 @@ export default function ALayout(props) {
                 onChangeIndex={handleChangeIndex}
             >
                 <TabPanel value={value} index={0} dir={theme.direction}>
-                    Item One
+                    <main>
+                        {main}
+                    </main>
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
-                    Item Two
-                  </TabPanel>
+                    Item One
+                </TabPanel>
+
                 <TabPanel value={value} index={2} dir={theme.direction}>
                     Item Three
                 </TabPanel>
             </SwipeableViews>
-            <main>
-                {main}
-            </main>
+
         </div>
     );
 }
