@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook --debug-webpack",
     "before-build": "cp -r ./dist/* ./public/",
-    "deploy": "npm run before-build && firebase deploy"
+    "deploy": "find ./public -type f -not -name '404.html' -print0 | xargs -0 -I {} rm {} && npm run before-build && firebase deploy"
   },
   "repository": {
     "type": "git",
