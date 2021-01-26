@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook --debug-webpack"
+    "build-storybook": "build-storybook --debug-webpack",
+    "before-build": "cp -r ./dist/* ./public/",
+    "deploy": "npm run before-build && firebase deploy"
   },
   "repository": {
     "type": "git",
