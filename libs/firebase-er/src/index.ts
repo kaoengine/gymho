@@ -57,3 +57,45 @@ export const initializeFirebaseAppClient = (
     }
 
 }
+
+function isServerConfig(
+    config: InitializeAppArgsClient | InitializeAppArgsServer
+): config is InitializeAppArgsServer {
+    return "credential" in config;
+}
+
+function isWebConfig(
+    config: InitializeAppArgsClient | InitializeAppArgsServer
+): config is InitializeAppArgsClient {
+    return "apiKey" in config;
+}
+
+export const initializeFirebaseApp = (
+    config: InitializeAppArgsClient | InitializeAppArgsServer | null = null
+) => {
+    if (config === null) return;
+    if (isWebConfig(config)) {
+        initializeFirebaseAppClient(config);
+    } else if (isServerConfig(config)) {
+        initializeFirebaseAppAdmin(config);
+    } else {
+        // Do nothing in react-native
+    }
+};
+
+export const initializeFirebaseAppAdmin = (config: InitializeAppArgsServer) => {
+    const { firebase, databaseURL, credential } = config;
+    try {
+        firebase.initializeApp({
+            databaseURL,
+            credential: firebase.credential.cert(credential as any)
+        });
+        return;
+    } catch (err) {
+        if (err.code !== "app/duplicate-app") {
+            throw err;
+        }
+    }
+};
+
+export default initializeFirebaseApp;
