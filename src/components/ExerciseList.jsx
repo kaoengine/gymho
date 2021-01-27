@@ -59,7 +59,6 @@ export default function ExerciseList() {
                                 <AddCircle className={classes.button} />
                             </IconButton>
                         </ListItemSecondaryAction>
-
                     </ListItem>
                 </div>
 
