@@ -38,6 +38,22 @@ export const initializeFirebaseAppClient = (
         storageBucket,
         messagingSenderId,
         ...restMaybe
-    } = config
+    } = config;
+
+    try {
+        firebase.initializeApp({
+            apiKey,
+            authDomain,
+            databaseURL,
+            projectId,
+            storageBucket,
+            messagingSenderId,
+            ...restMaybe
+        });
+    } catch (err) {
+        if (err.code !== "app/duplicate-app") {
+            throw err;
+        }
+    }
 
 }
