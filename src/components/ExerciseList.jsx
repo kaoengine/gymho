@@ -30,39 +30,42 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function generate(element) {
-    return [0, 1, 2, 3, 4].map((value) =>
-        React.cloneElement(element, {
-            key: value,
-        }),
+function generate(classes, updateExercies, data) {
+    const dataKey = ['pull', 'push', 'arm', 'scun', 'squat']
+    return data.map((value, index) =>
+        <div key={index}>
+            <ListItem className={classes.list}>
+                <ListItemAvatar>
+                    <Avatar variant="square" className={classes.square}>
+                        <FolderIcon />
+                    </Avatar>
+                </ListItemAvatar>
+                <ListItemText
+                    primary={value.id}
+                />
+
+                <ListItemText
+                    primary={value.counter}
+                />
+                <ListItemSecondaryAction>
+                    <IconButton color="primary" aria-label="add to shopping cart" onClick={() => updateExercies(value.id)}>
+                        <AddCircle className={classes.button} />
+                    </IconButton>
+                </ListItemSecondaryAction>
+            </ListItem>
+        </div>
     );
 }
 
-export default function ExerciseList() {
+
+export default function ExerciseList(props) {
     const classes = useStyles();
+    const { updateExercies, data } = props;
 
     return (
         <List component="nav" className={classes.root} aria-label="mailbox folders">
-            {generate(
-                <div>
-                    <ListItem className={classes.list}>
-                        <ListItemAvatar>
-                            <Avatar variant="square" className={classes.square}>
-                                <FolderIcon />
-                            </Avatar>
-                        </ListItemAvatar>
-                        <ListItemText
-                            primary={`Exercise Name`}
-                        />
-                        <ListItemSecondaryAction>
-                            <IconButton color="primary" aria-label="add to shopping cart">
-                                <AddCircle className={classes.button} />
-                            </IconButton>
-                        </ListItemSecondaryAction>
-                    </ListItem>
-                </div>
-
-            )
+            {
+                generate(classes, updateExercies, data)
             }
         </List >
     );
