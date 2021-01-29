@@ -40,7 +40,6 @@
     "@material-ui/icons": "^4.11.2",
     "@storybook/cli": "^6.2.0-alpha.16",
     "axios": "^0.21.1",
-    "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
