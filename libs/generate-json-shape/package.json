@@ -16,7 +16,6 @@
         "generate-json": "dist/cli.cjs.js"
     },
     "dependencies": {
-        "chunk-and-parallelize": "^0.1.1",
         "faker": "^4.1.0",
         "flat": "^4.1.0",
         "lodash.set": "^4.3.2",
