@@ -30,9 +30,18 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+function generateHistory(data, counter, id) {
+    return (
+        <>
+            {data.map(d => d.content.map(m => m.id === id ? <ListItemText
+                primary={m.counter} />: ''))}
+        </>
+    )
+}
 function generate(classes, updateExercies, data) {
     const dataKey = ['pull', 'push', 'arm', 'scun', 'squat']
-    return data.map((value, index) =>
+    const todayData = data[data.length - 1].content
+    return todayData.map((value, index) =>
         <div key={index}>
             <ListItem className={classes.list}>
                 <ListItemAvatar>
@@ -40,13 +49,12 @@ function generate(classes, updateExercies, data) {
                         <FolderIcon />
                     </Avatar>
                 </ListItemAvatar>
+
                 <ListItemText
                     primary={value.id}
                 />
 
-                <ListItemText
-                    primary={value.counter}
-                />
+                {generateHistory(data, value.counter, value.id)}
                 <ListItemSecondaryAction>
                     <IconButton color="primary" aria-label="add to shopping cart" onClick={() => updateExercies(value.id)}>
                         <AddCircle className={classes.button} />
