@@ -1,2 +1,3 @@
 import useLocalStorage from './useLocalStorage'
-export { useLocalStorage };
+import useExerciseStorage from './useExerciseStorage'
+export { useLocalStorage, useExerciseStorage };
