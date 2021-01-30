@@ -104,6 +104,6 @@ export default function useExerciseStorage(key) {
         }
     };
 
-    const exercises = data[0].content
+    const exercises = data
     return [exercises, setExecercise];
 }
