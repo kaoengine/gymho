@@ -13,14 +13,14 @@
 7 verbose currentBranch b37
 8 silly remoteBranchExists
 9 silly isBehindUpstream
-10 silly isBehindUpstream b37 is behind origin/b37 by 0 commit(s) and ahead by 0
+10 silly isBehindUpstream b37 is behind origin/b37 by 0 commit(s) and ahead by 1
 11 silly hasTags
 12 verbose hasTags false
 13 info Assuming all packages changed
 14 verbose updated test
 15 verbose updated @app/gymho
-16 verbose git-describe undefined => "47b78fd"
-17 silly git-describe parsed => {"refCount":"183","sha":"47b78fd","isDirty":false}
+16 verbose git-describe undefined => "18d492e"
+17 silly git-describe parsed => {"refCount":"184","sha":"18d492e","isDirty":false}
 18 info execute Skipping releases
 19 silly lifecycle No script for "preversion" in "root", continuing
 20 silly lifecycle No script for "preversion" in "test", continuing
