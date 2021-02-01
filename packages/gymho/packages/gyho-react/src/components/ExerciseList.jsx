@@ -74,7 +74,7 @@ export default function ExerciseList(props) {
         <List component="nav" className={classes.root} aria-label="mailbox folders">
             {
                 generate(classes, updateExercies, data)
-            }
+m            }
         </List >
     );
 }
