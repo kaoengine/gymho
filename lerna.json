@@ -7,6 +7,12 @@
   ],
   "command": {
     "publish": {
+      "version": {
+        "allowBranch": [
+          "main",
+          "feature/*"
+        ]
+      },
       "ignoreChanges": [
         "ignored-file",
         "*.md"
