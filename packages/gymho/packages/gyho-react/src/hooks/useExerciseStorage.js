@@ -6,56 +6,30 @@ export default function useExerciseStorage(key) {
             "date": '1/28/2021',
             "content": [{
                 "id": "pull",
-                "counter": 1
+                "counter": 0
             },
             {
                 "id": "push",
-                "counter": 1
+                "counter": 0
             },
             {
                 "id": "arm",
-                "counter": 1
+                "counter": 0
             },
             {
                 "id": "squat",
-                "counter": 1
+                "counter": 0
             },
             {
                 "id": "scrun",
-                "counter": 1
+                "counter": 0
             },
             {
                 "id": "shoulder",
-                "counter": 1
+                "counter": 0
             }]
-        },
-        {
-            "date": '1/29/2021',
-            "content": [{
-                "id": "pull",
-                "counter": 1
-            },
-            {
-                "id": "push",
-                "counter": 1
-            },
-            {
-                "id": "arm",
-                "counter": 1
-            },
-            {
-                "id": "squat",
-                "counter": 1
-            },
-            {
-                "id": "scrun",
-                "counter": 1
-            },
-            {
-                "id": "shoulder",
-                "counter": 1
-            }]
-        }]
+        }
+    ]
 
     const [data, setToLocalStorage = setValue] = useLocalStorage(key, defaultValue);
     const setExecercise = (exercise) => {
@@ -70,27 +44,27 @@ export default function useExerciseStorage(key) {
                     "date": new Date(),
                     "content": [{
                         "id": "pull",
-                        "counter": 1
+                        "counter": 0
                     },
                     {
                         "id": "push",
-                        "counter": 1
+                        "counter": 0
                     },
                     {
                         "id": "arm",
-                        "counter": 1
+                        "counter": 0
                     },
                     {
                         "id": "squat",
-                        "counter": 1
+                        "counter": 0
                     },
                     {
                         "id": "scrun",
-                        "counter": 1
+                        "counter": 0
                     },
                     {
                         "id": "shoulder",
-                        "counter": 1
+                        "counter": 0
                     }]
                 }
                 data.push(exercies)
