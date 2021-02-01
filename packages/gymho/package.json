@@ -5,6 +5,7 @@
     "nsp": "nsp",
     "ln": "lerna-wizard",
     "clean": "npm cache clean --forces && rm -rf node_modules package-lock.json"
+    
   },
   "devDependencies": {
     "lerna": "^3.22.1"
