@@ -1,5 +1,5 @@
 {
-    "name": "@react-firebase/hooks",
+    "name": "@react-firebase/local-storage",
     "version": "0.0.1",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",

@@ -1,0 +1,11 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "allowJs": true,
+      "emitDeclarationOnly": true,
+      "declaration": true,
+      "declarationDir": "lib/",
+      "target": "ES2016"
+    },
+    "include": ["index.ts"]
+  }

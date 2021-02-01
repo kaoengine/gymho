@@ -1,8 +1,20 @@
-31 error Error: Command failed: git add -- libs/test/package.json src/app/package.json src/app/package-lock.json
-31 error The following paths are ignored by one of your .gitignore files:
-31 error src/app/package-lock.json
-31 error Use -f if you really want to add them.
-31 error
-31 error     at makeError (/home/khanh/.nvm/versions/node/v12.18.3/lib/node_modules/lerna/node_modules/execa/index.js:174:9)
-31 error     at /home/khanh/.nvm/versions/node/v12.18.3/lib/node_modules/lerna/node_modules/execa/index.js:278:16
-31 error     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+0 silly argv { _: [ 'bootstrap' ], lernaVersion: '3.22.1', '$0': 'lerna' }
+1 notice cli v3.22.1
+2 verbose rootPath /home/khanh/Project/gymho
+3 info versioning independent
+4 notice filter excluding "component-*"
+5 info filter [ '!component-*' ]
+6 silly npmConfig {
+6 silly npmConfig   registry: undefined,
+6 silly npmConfig   npmClient: 'npm',
+6 silly npmConfig   npmClientArgs: [ '--no-package-lock' ],
+6 silly npmConfig   mutex: undefined
+6 silly npmConfig }
+7 error Error: Unsupported URL Type "link:": link:../packages/pwa-manifest-core
+7 error     at unsupportedURLType (/home/khanh/.nvm/versions/node/v12.18.3/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:200:15)
+7 error     at fromURL (/home/khanh/.nvm/versions/node/v12.18.3/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:258:13)
+7 error     at Function.resolve (/home/khanh/.nvm/versions/node/v12.18.3/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:77:12)
+7 error     at /home/khanh/.nvm/versions/node/v12.18.3/lib/node_modules/lerna/node_modules/@lerna/bootstrap/index.js:246:13
+7 error     at Array.some (<anonymous>)
+7 error     at BootstrapCommand.rootHasLocalFileDependencies (/home/khanh/.nvm/versions/node/v12.18.3/lib/node_modules/lerna/node_modules/@lerna/bootstrap/index.js:243:42)
+7 error     at BootstrapCommand.execute (/home/khanh/.nvm/versions/node/v12.18.3/lib/node_modules/lerna/node_modules/@lerna/bootstrap/index.js:181:44)

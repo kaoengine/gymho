@@ -2,8 +2,9 @@
   "version": "independent",
   "npmClient": "npm",
   "packages": [
-    "libs/*",
-    "src/*"
+    "packages/*",
+    "src/*",
+    "packages/pwa/*"
   ],
   "command": {
     "publish": {

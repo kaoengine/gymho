@@ -1,5 +1,5 @@
 {
-  "name": "firebase-er",
+  "name": "@react-firebase/firebase-er",
   "version": "0.0.0",
   "description": "Initialize a firebase app (web or admin) with duplicate app error ignore",
   "main": "dist/index.cjs.js",

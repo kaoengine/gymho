@@ -1,5 +1,5 @@
 {
-    "name": "generate-json-shape",
+    "name": "@kao/generate-json-shape",
     "version": "0.0.1",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
