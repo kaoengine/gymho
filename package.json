@@ -2,7 +2,6 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "nsp": "nsp",
     "ln": "lerna-wizard",
     "test": "lerna run test --scope={@firebase/connect,@gymho/common}",
     "clean": "npm cache clean --forces && rm -rf node_modules package-lock.json",
@@ -16,7 +15,6 @@
   },
   "devDependencies": {
     "lerna": "^3.22.1",
-    "lerna-changelog": "^1.0.1"
   },
   "dependencies": {
     "lerna-wizard": "^1.1.1"
@@ -27,5 +25,4 @@
       "bug": "Bug Fix"
     }
   }
-
 }
