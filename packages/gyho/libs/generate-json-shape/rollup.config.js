@@ -1,4 +1,4 @@
-import typescript from "rollup-plugin-typescript2";
+import typescript from "../../../../src/gyho/libs/generate-json-shape/node_modules/rollup-plugin-typescript2";
 
 export default [
     {
@@ -21,7 +21,7 @@ export default [
         external: ["faker", "flat", "lodash.set", "mkdirp", "mri"],
         plugins: [
             typescript({
-                typescript: require("typescript"),
+                typescript: require("../../../../src/gyho/libs/generate-json-shape/node_modules/typescript"),
                 abortOnError: false,
                 tsconfigOverride: {
                     compilerOptions: {
@@ -48,7 +48,7 @@ export default [
         external: ["lru-cache", "document", "store2"],
         plugins: [
             typescript({
-                typescript: require("typescript"),
+                typescript: require("../../../../src/gyho/libs/generate-json-shape/node_modules/typescript"),
                 abortOnError: false,
                 tsconfigOverride: {
                     compilerOptions: {
