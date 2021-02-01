@@ -45,5 +45,20 @@
     "react": "^16.14.0",
     "react-swipeable-views": "^0.13.9",
     "styled-components": "^5.2.1"
+  },
+  "pwaManifest": {
+    "name": "Gym at home",
+    "shortName": "gymho",
+    "startURL": "./offline",
+    "theme": "#add8e6",
+    "generateIconOptions": {
+      "baseIcon": "./public/my-awesome-icon.svg",
+      "sizes": [
+        192,
+        384,
+        512
+      ],
+      "genFavicons": true
+    }
   }
 }

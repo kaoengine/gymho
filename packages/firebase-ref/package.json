@@ -1,5 +1,5 @@
 {
-  "name": "get-firebase-ref",
+  "name": "@kao/get-firebase-ref",
   "version": "0.0.0-development",
   "description": "Get a Firebase ref from a query and firebase module (web or admin)",
   "main": "dist/index.cjs.js",
