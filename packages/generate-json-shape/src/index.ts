@@ -1,5 +1,5 @@
 import faker from "faker";
-import chunkAndParallelize from "../utils/main.js.js";
+import chunkAndParallelize from "../utils/main.js";
 
 export type StringNode = {
     depth: number;
