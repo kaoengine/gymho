@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "lw": "lerna-wizard",
-    "test": "lerna run test --scope={@firebase/connect,@gymho/common}",
+    "test-bak": "lerna run test --scope={@firebase/connect,@gymho/common}",
     "clean": "npm cache clean --forces && rm -rf node_modules package-lock.json",
     "start": "lerna bootstrap  && lerna run --parallel start --scope=@app/gymho",
     "new-version": "lerna version --conventional-commits --yes",
@@ -11,13 +11,45 @@
     "build": "lerna run build --scope=@app/gymho",
     "changelog": "lerna-changelog",
     "publish": "lerna publish",
-    "start-app": "node src/app/dist/index.html"
+    "start-app": "node src/app/dist/index.html",
+    "pretest": "yarn workspace @pwa-manifest/core build-unchecked && yarn workspace parcel-transformer-pwa-manifest build-unchecked && yarn workspace parcel-namer-pwa-manifest build-unchecked",
+    "test": "jest && cat ./coverageReport/lcov.info | coveralls"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@pwa-manifest/core": "link:pwa-manifest/core",
+    "@pwa-manifest/potrace": "link:@pwa-manifest/potrace",
+    "parcel-config-pwa-manifest": "link:packages/parcel-config-pwa-manifest",
+    "parcel-namer-pwa-manifest": "link:packages/parcel-namer-pwa-manifest",
+    "parcel-plugin-pwa-manifest": "link:packages/parcel-plugin-pwa-manifest",
+    "parcel-transformer-pwa-manifest": "link:packages/parcel-transformer-pwa-manifest",
+    "webpack-plugin-pwa-manifest": "link:packages/webpack-plugin-pwa-manifest",
+    "lerna-wizard": "^1.1.1"
   },
   "devDependencies": {
-    "lerna": "^3.22.1",
-  },
-  "dependencies": {
-    "lerna-wizard": "^1.1.1"
+    "@types/callsite": "^1.0.30",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.6",
+    "@types/parcel-bundler": "^1.12.1",
+    "@types/sharp": "^0.23.0",
+    "@types/webpack": "^4.41.12",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "coveralls": "^3.0.9",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "html-webpack-plugin": ">=4",
+    "jest": "24.8.0",
+    "lerna": "^3.19.0",
+    "parcel": ">2.0.0-beta.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.2",
+    "webpack": ">=4.39.0"
   },
   "changelog": {
     "labels": {
