@@ -1,12 +1,11 @@
 {
   "version": "independent",
-  "npmClient": "yarn",
+  "npmClient": "npm",
   "packages": [
     "packages/*",
     "src/*",
     "packages/pwa/*"
   ],
-  "useWorkspaces": true,
   "command": {
     "publish": {
       "version": {
