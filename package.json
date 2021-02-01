@@ -4,8 +4,12 @@
   "scripts": {
     "nsp": "nsp",
     "ln": "lerna-wizard",
-    "clean": "npm cache clean --forces && rm -rf node_modules package-lock.json"
-    
+    "test": "lerna run test --scope={@firebase/connect,@gymho/common}",
+    "clean": "npm cache clean --forces && rm -rf node_modules package-lock.json",
+    "start": "lerna bootstrap  && lerna run --parallel start --scope=@app/gymho",
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff",
+    "build": "lerna run build --scope=@app/gymho"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
