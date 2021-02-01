@@ -9,12 +9,23 @@
     "start": "lerna bootstrap  && lerna run --parallel start --scope=@app/gymho",
     "new-version": "lerna version --conventional-commits --yes",
     "diff": "lerna diff",
-    "build": "lerna run build --scope=@app/gymho"
+    "build": "lerna run build --scope=@app/gymho",
+    "changelog": "lerna-changelog",
+    "publish": "lerna publish",
+    "start-app": "node src/app/dist/index.html"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1"
   },
   "dependencies": {
     "lerna-wizard": "^1.1.1"
+  },
+  "changelog": {
+    "labels": {
+      "feature": "New Feature",
+      "bug": "Bug Fix"
+    }
   }
+
 }

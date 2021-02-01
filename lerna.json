@@ -17,6 +17,7 @@
         "ignored-file",
         "*.md"
       ],
+      "conventionalCommits": true,
       "message": "chore(release): publish",
       "registry": "https://npm.pkg.github.com"
     },
@@ -25,6 +26,16 @@
       "npmClientArgs": [
         "--no-package-lock"
       ]
+    }
+  },
+  "changelog": {
+    "ignoreCommitters": [
+      "allcontributors"
+    ],
+    "labels": {
+      "enhancement": ":rocket: New Feature",
+      "core": ":earth_asia: Core",
+      "bug": ":bug: Bug Fix"
     }
   }
 }
