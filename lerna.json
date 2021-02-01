@@ -1,0 +1,31 @@
+{
+  "version": "independent",
+  "npmClient": "npm",
+  "packages": [
+    "libs/*",
+    "src/*"
+  ],
+  "command": {
+    "publish": {
+      "version": {
+        "allowBranch": [
+          "main",
+          "feature/*"
+        ]
+      },
+      "ignoreChanges": [
+        "ignored-file",
+        "*.md"
+      ],
+      "conventionalCommits": true,
+      "message": "chore(release): publish",
+      "registry": "https://npm.pkg.github.com"
+    },
+    "bootstrap": {
+      "ignore": "component-*",
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
+    }
+  }
+}
