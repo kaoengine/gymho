@@ -4,7 +4,9 @@ import {
     Typography,
     CssBaseline,
     makeStyles,
-    Box,
+    CardMedia,
+    CardActionArea,
+    Card,
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -16,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     text: {
         color: "#0D4DA1",
         fontWeight: 500,
+    },
+    media: {
+        height: 200,
     },
 }));
 
@@ -30,6 +35,15 @@ export default function ExerciseCounter() {
                         3x15
                 </Typography>
             </Container>
+            <Card>
+                <CardActionArea>
+                    <CardMedia
+                        className={classes.media}
+                        image="https://i.ytimg.com/vi/yaqe1qesQ8c/maxresdefault.jpg"
+                        title="Contemplative Reptile"
+                    />
+                </CardActionArea>
+            </Card>
         </React.Fragment>
     );
 }
