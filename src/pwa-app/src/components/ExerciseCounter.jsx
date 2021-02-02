@@ -8,6 +8,7 @@ import {
     CardActionArea,
     Card,
 } from '@material-ui/core';
+import ExerciceImg from './ExerciceImg'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
     media: {
         height: 200,
     },
+    img: {
+        height: "50%",
+        alignItems: "center",
+    }
 }));
 
 export default function ExerciseCounter() {
@@ -35,7 +40,7 @@ export default function ExerciseCounter() {
                         3x15
                 </Typography>
             </Container>
-            <Card>
+            {/* <Card>
                 <CardActionArea>
                     <CardMedia
                         className={classes.media}
@@ -43,7 +48,8 @@ export default function ExerciseCounter() {
                         title="Contemplative Reptile"
                     />
                 </CardActionArea>
-            </Card>
+            </Card> */}
+            <ExerciceImg className={classes.img}/>
         </React.Fragment>
     );
 }
