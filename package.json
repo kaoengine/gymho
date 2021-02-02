@@ -19,7 +19,6 @@
     "packages/*"
   ],
   "dependencies": {
- 
     "lerna-wizard": "^1.1.1"
   },
   "devDependencies": {
@@ -33,6 +32,7 @@
     "@typescript-eslint/parser": "^2.8.0",
     "coveralls": "^3.0.9",
     "eslint": "^6.6.0",
+    "rimraf": "^3.0.2",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "html-webpack-plugin": ">=4",
