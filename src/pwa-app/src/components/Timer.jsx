@@ -51,9 +51,7 @@ export default function Timer() {
                 <Typography align="center" variant="h5" gutterBottom>
                     Timer
                 </Typography>
-                <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-                <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
-                <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
+                <Typography>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:{("0" + ((time / 10) % 100)).slice(-2)}</Typography>
             </Container>
         </Container>
     );
