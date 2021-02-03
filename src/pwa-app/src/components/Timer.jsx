@@ -1,13 +1,20 @@
 import React from "react";
 import {
-    IconButton,
     Button,
     Container,
+    makeStyles,
     Typography,
 } from '@material-ui/core';
-import { ArrowDropDown, ArrowDropUp, ExpandLess, ExpandMore } from "@material-ui/icons";
+
+const useStyles = makeStyles((theme) => ({
+    button: {
+        color: "#3fc0c3",
+        borderRadius: 8,
+    },
+}));
 
 export default function Timer() {
+    const classes = useStyles();
     const [time, setTime] = React.useState(0);
     const [timerOn, setTimerOn] = React.useState(false);
 
@@ -26,17 +33,17 @@ export default function Timer() {
     }, [timerOn]);
 
     return (
-        <div className="Timers">
-            <Container id="buttons">
+        <Container className="Timers">
+            <Container>
                 {!timerOn && time === 0 && (
-                    <Button onClick={() => setTimerOn(true)}>Start</Button>
+                    <Button variant="contained" className={classes.button} onClick={() => setTimerOn(true)}>Start</Button>
                 )}
-                {timerOn && <Button onClick={() => setTimerOn(false)}>Stop</Button>}
+                {timerOn && <Button variant="contained" className={classes.button} onClick={() => setTimerOn(false)}>Stop</Button>}
                 {!timerOn && time > 0 && (
-                    <Button onClick={() => setTime(0)}>Reset</Button>
+                    <Button variant="contained" className={classes.button} onClick={() => setTime(0)}>Reset</Button>
                 )}
                 {!timerOn && time > 0 && (
-                    <Button onClick={() => setTimerOn(true)}>Resume</Button>
+                    <Button variant="contained" className={classes.button} onClick={() => setTimerOn(true)}>Resume</Button>
                 )}
             </Container>
 
@@ -48,7 +55,7 @@ export default function Timer() {
                 <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
                 <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
             </Container>
-        </div>
+        </Container>
     );
 };
 
