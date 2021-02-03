@@ -9,6 +9,7 @@ import {
     Card,
 } from '@material-ui/core';
 import ExerciceImg from './ExerciceImg'
+import Timer from './Timer'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
         height: 200,
     },
     img: {
-        height: "50%",
-        alignItems: "center",
+        height: "500px",
+        width: "500px",
     }
 }));
 
@@ -37,7 +38,7 @@ export default function ExerciseCounter() {
             <Container maxWidth="sm">
                 <Typography className={classes.text} align="center" variant="h5" gutterBottom>
                     Strides <br />
-                        3x15
+                    3x15
                 </Typography>
             </Container>
             {/* <Card>
@@ -49,7 +50,12 @@ export default function ExerciseCounter() {
                     />
                 </CardActionArea>
             </Card> */}
-            <ExerciceImg className={classes.img}/>
+            <Container align="center">
+                <ExerciceImg className={classes.img} />
+            </Container>
+            <Container align="center">
+                <Timer />
+            </Container>
         </React.Fragment>
     );
 }
