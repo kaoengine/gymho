@@ -8,8 +8,17 @@ import {
 
 const useStyles = makeStyles((theme) => ({
     button: {
+        backgroundColor: "#3fc0c3",
+        color: "#FFF",
+        borderRadius: 25,
+    },
+    blueTitle: {
+        color: "#0D4DA1",
+        fontWeight: "bold",
+    },
+    display: {
         color: "#3fc0c3",
-        borderRadius: 8,
+        fontWeight: "bold",
     },
 }));
 
@@ -48,10 +57,13 @@ export default function Timer() {
             </Container>
 
             <Container id="display">
-                <Typography align="center" variant="h5" gutterBottom>
+                <Typography align="center" className={classes.blueTitle} gutterBottom>
                     Timer
                 </Typography>
-                <Typography>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:{("0" + ((time / 10) % 100)).slice(-2)}</Typography>
+                <Typography className={classes.display}>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:{("0" + ((time / 10) % 100)).slice(-2)}</Typography>
+                <Typography align="center" className={classes.blueTitle} gutterBottom>
+                    20 Min      60 Cal      4 Sets
+                </Typography>
             </Container>
         </Container>
     );
