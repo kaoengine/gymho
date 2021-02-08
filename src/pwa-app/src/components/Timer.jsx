@@ -10,15 +10,20 @@ const useStyles = makeStyles((theme) => ({
     button: {
         backgroundColor: "#3fc0c3",
         color: "#FFF",
-        borderRadius: 25,
+        height: "60px",
+        width: "50px",
+        borderRadius: "100%",
+        fontWeight: "bold",
     },
     blueTitle: {
         color: "#0D4DA1",
         fontWeight: "bold",
+        fontSize: "18px",
     },
     display: {
         color: "#3fc0c3",
         fontWeight: "bold",
+        fontSize: "42px",
     },
 }));
 
@@ -60,10 +65,17 @@ export default function Timer() {
                 <Typography align="center" className={classes.blueTitle} gutterBottom>
                     Timer
                 </Typography>
-                <Typography className={classes.display}>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:{("0" + ((time / 10) % 100)).slice(-2)}</Typography>
-                <Typography align="center" className={classes.blueTitle} gutterBottom>
-                    20 Min      60 Cal      4 Sets
-                </Typography>
+                {/* <Typography className={classes.display}>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:{("0" + ((time / 10) % 100)).slice(-2)}</Typography> */}
+                <Typography className={classes.display}>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</Typography>
+                <Button align="center" className={classes.blueTitle}>
+                    20 Mins
+                </Button>
+                <Button align="center" className={classes.blueTitle}>
+                    60 Cal
+                </Button>
+                <Button align="center" className={classes.blueTitle}>
+                    4 Sets
+                </Button>
             </Container>
         </Container>
     );

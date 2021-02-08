@@ -8,6 +8,7 @@ import {
     CardActionArea,
     Card,
 } from '@material-ui/core';
+import CustomImg from './CustomImg'
 import ExerciceImg from './ExerciceImg'
 import Timer from './Timer'
 
@@ -25,8 +26,8 @@ const useStyles = makeStyles((theme) => ({
         height: 200,
     },
     img: {
-        height: "500px",
-        width: "500px",
+        height: "300px",
+        width: "auto",
     }
 }));
 
@@ -51,7 +52,7 @@ export default function ExerciseCounter() {
                 </CardActionArea>
             </Card> */}
             <Container align="center">
-                <ExerciceImg className={classes.img} />
+                <CustomImg className={classes.img} />
             </Container>
             <Container align="center">
                 <Timer />

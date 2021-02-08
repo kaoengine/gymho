@@ -1,14 +1,25 @@
 import React, { Component } from "react";
 
 import ActivityPage from "./pages/Activity"
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import ExercisePage from "./pages/Excercise"
-class App extends React.Component {
-    render() {
+import { Fragment } from "react";
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        backgroundColor: "#fff",
+    },
+}));
+
+export default function App() {
+        const classes = useStyles();
+
         return (
-            <ActivityPage></ActivityPage>
-            // <ExercisePage></ExercisePage>
+            <div className={classes.root}>
+                {/* <ActivityPage></ActivityPage> */}
+                <ExercisePage></ExercisePage>
+            </div>
         )
-    }
 }
 
-export default App;
+// export default App;
