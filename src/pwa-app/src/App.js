@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import ActivityPage from "./pages/Activity"
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import ExercisePage from "./pages/Excercise"
+import SurveyPage from "./pages/Survey"
 import { Fragment } from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +17,7 @@ export default function App() {
         return (
             <div className={classes.root}>
                 {/* <ActivityPage></ActivityPage> */}
-                <ExercisePage></ExercisePage>
+                <SurveyPage></SurveyPage>
             </div>
         )
 }
