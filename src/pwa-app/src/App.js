@@ -23,10 +23,6 @@ export default function App() {
     const classes = useStyles();
     return (
 
-        // <div className={classes.root}>
-        //     <ActivityPage></ActivityPage>
-        //     {/* <SurveyPage></SurveyPage> */}
-        // </div>
         <Router>
             <div>
                 <nav>
@@ -47,16 +43,22 @@ export default function App() {
                   renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/activity">
-                        <ActivityPage />
+                        <div className={classes.root}>
+                            <ActivityPage></ActivityPage>
+                        </div>
                     </Route>
                     <Route path="/survey">
-                        <SurveyPage />
+                        <div className={classes.root}>
+                            <SurveyPage></SurveyPage>
+                        </div>
                     </Route>
                     <Route path="/process">
                         Hello
                     </Route>
                     <Route path="/">
-                        <ActivityPage />
+                        <div className={classes.root}>
+                            <ActivityPage></ActivityPage>
+                        </div>
                     </Route>
                 </Switch>
             </div>
