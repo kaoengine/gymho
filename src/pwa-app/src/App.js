@@ -26,22 +26,7 @@ export default function App() {
 
         <Router>
             <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/activity">activity</Link>
-                        </li>
-                        <li>
-                            <Link to="/process">process</Link>
-                        </li>
-                        <li>
-                            <Link to="/excercise">excercise</Link>
-                        </li>
-                        <li>
-                            <Link to="/survey">Survey</Link>
-                        </li>
-                    </ul>
-                </nav>
+               
 
                 {/* A <Switch> looks through its children <Route>s and
                   renders the first one that matches the current URL. */}
