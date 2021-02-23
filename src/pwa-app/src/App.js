@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import ActivityPage from "./pages/Activity"
+import ExcercisePage from './pages/Excercise'
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import SurveyPage from "./pages/Survey"
 
@@ -34,6 +35,9 @@ export default function App() {
                             <Link to="/process">process</Link>
                         </li>
                         <li>
+                            <Link to="/excercise">excercise</Link>
+                        </li>
+                        <li>
                             <Link to="/survey">Survey</Link>
                         </li>
                     </ul>
@@ -45,6 +49,11 @@ export default function App() {
                     <Route path="/activity">
                         <div className={classes.root}>
                             <ActivityPage></ActivityPage>
+                        </div>
+                    </Route>
+                    <Route path="/excercise">
+                        <div className={classes.root}>
+                            <ExcercisePage></ExcercisePage>
                         </div>
                     </Route>
                     <Route path="/survey">

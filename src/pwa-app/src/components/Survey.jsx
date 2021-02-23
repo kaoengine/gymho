@@ -14,7 +14,7 @@ export default function SurveyQuest(props) {
             <div style={{ marginBottom: '6rem' }}>
                 <Answers answers={data['anws']}></Answers>
             </div>
-            <Footer></Footer>
+            <Footer data={"2 of 10 questions"}></Footer>
         </div>
 
     );

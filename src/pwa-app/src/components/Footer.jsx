@@ -31,7 +31,7 @@ export default function Footer(props) {
                 justify="space-evenly"
                 alignItems="center"
             >
-                <Typography className={classes.text}>2 of 10 questions</Typography>
+                <Typography className={classes.text}>{data} </Typography>
             </Grid>
         </div>
     );
