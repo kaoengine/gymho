@@ -1,10 +1,11 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { 
-  Bar, 
+import {
+  Bar,
   Line,
   Pie,
 } from 'react-chartjs-2'
+import { Button, Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,8 +18,9 @@ export default function BarChart() {
   const theme = useTheme();
 
   return (
-    <div className={classes.root}>
-      <Bar 
+    <Container>
+      <Container>
+      <Bar
         data={{
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           datasets: [
@@ -31,10 +33,28 @@ export default function BarChart() {
         height={200}
         width={600}
         options={{
-          maintainAspectRatio: false
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+            },],
+          },
         }}
-        />
-    </div>
-    
+      />
+      </Container>
+      <Container id="display">
+        <Button align="center">
+          Week
+                </Button>
+        <Button align="center">
+          Month
+                </Button>
+        <Button align="center">
+          Year
+                </Button>
+      </Container>
+    </Container>
   );
 }
