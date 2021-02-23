@@ -55,19 +55,19 @@ export default function BLayout(props) {
                     <Grid container justify="space-around" spacing={5}>
                         <Grid key={1} item>
                             <IconButton edge="start" color="inherit" aria-label="open drawer">
-                                <MenuIcon style={{ color: "#0D4DA1"}} />
+                                <MenuIcon style={{ color: "#0D4DA1" }} />
                             </IconButton>
                         </Grid>
                         <Grid key={2} item>
                             <Typography className={classes.text} align="center" variant="h5" gutterBottom>
                                 <Box textAlign="center" fontWeight="fontWeightBold" m={1}>
-                                    Dumbbell <br></br> workout
+                                    {title}
                                 </Box>
                             </Typography>
                         </Grid>
                         <Grid key={3} item>
                             <IconButton edge="end" color="inherit">
-                                <Settings style={{ color: "#fff", stroke: "#0D4DA1", strokeWidth: "1.5"}} />
+                                <Settings style={{ color: "#fff", stroke: "#0D4DA1", strokeWidth: "1.5" }} />
                             </IconButton>
                         </Grid>
                     </Grid>
