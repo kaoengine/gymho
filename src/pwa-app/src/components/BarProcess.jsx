@@ -153,7 +153,15 @@ import { Button, Container } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex'
-  }
+  },
+  button: {
+    backgroundColor: "#3fc0c3",
+    color: "#FFF",
+    height: "34px",
+    width: "50px",
+    borderRadius: "25%",
+    fontWeight: "bold",
+  },
 }));
 
 export default function BarChart() {
@@ -162,8 +170,11 @@ export default function BarChart() {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
   const gradient = ctx.createLinearGradient(300, 0, 300, 300);
-  gradient.addColorStop(0, 'black');
+  const gradient2 = ctx.createLinearGradient(300, 0, 300, 300);
+  gradient.addColorStop(0, '#189fd0');
+  gradient2.addColorStop(1, '#189fd0');
   gradient.addColorStop(1, '#3fc0c3');
+  gradient2.addColorStop(0, '#3fc0c3');
 
   return (
     <Container>
@@ -191,15 +202,13 @@ export default function BarChart() {
                 pointStyle: 'circle',
                 barThickness: '15',
                 backgroundColor: gradient,
-                borderSkipped: '',
-                borderColor: gradient,
-                borderWidth: '2',
-                borderRadius: '5'
+                borderColor: gradient2,
+                borderWidth: '2.5',
               }
             ]
           }}
           height={200}
-          width={500}
+          width={550}
           options={{
             cornerRadius: 8,
             maintainAspectRatio: false,
@@ -226,7 +235,7 @@ export default function BarChart() {
       </Container>
       <Container>
         <Button align="center">Week</Button>
-        <Button align="center">Month</Button>
+        <Button className={classes.button} align="center">Month</Button>
         <Button align="center">Year</Button>
       </Container>
     </Container>

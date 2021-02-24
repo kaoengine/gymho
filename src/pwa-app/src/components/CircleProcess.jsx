@@ -19,14 +19,15 @@ export default function CircularChart() {
   return (
     <Container className={classes.root} style={{ width: 250, height: 250 }}>
       <CircularProgressbarWithChildren
-        value={55}
+        value={80}
         strokeWidth={5}
         styles={buildStyles({
           pathColor: "#3fc0c3",
-          trailColor: "gold"
+          trailColor: "gold",
+          rotation: 0.5 + (1 - 50 / 100) /2
         })}
         >
-        <div style={{ marginTop: -41, alignItems: 'center' }}>
+        <div style={{ marginTop: -41 }}>
           <h4>Time</h4>
           <p>120</p>
           <h4>Calories</h4>

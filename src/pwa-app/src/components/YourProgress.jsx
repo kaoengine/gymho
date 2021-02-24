@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 export default function YourProgress() {
     const classes = useStyles();
     return (
-        <div>
+        <div align="center">
             <Typography className={classes.title} align='center'>Great work <br /> for today</Typography>
             <CircularChart />
             <BarChart />
