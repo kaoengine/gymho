@@ -208,7 +208,7 @@ export default function BarChart() {
             ]
           }}
           height={200}
-          width={550}
+          width={275}
           options={{
             cornerRadius: 8,
             maintainAspectRatio: false,

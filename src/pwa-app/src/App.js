@@ -39,11 +39,13 @@ export default function App() {
                 </div>
             </Route>
             <Route path="/process">
-                Hello
-                    </Route>
-            <Route path="/">
                 <div className={classes.root}>
                     <ProgressPage></ProgressPage>
+                </div>
+            </Route>
+            <Route path="/">
+                <div className={classes.root}>
+                    <ActivityPage></ActivityPage>
                 </div>
             </Route>
         </Switch>
