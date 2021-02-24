@@ -11,7 +11,8 @@
     "build": "lerna run build --scope=@app/gymho",
     "changelog": "lerna-changelog",
     "publish": "lerna publish",
-    "start-app": "lerna run --parallel start --scope=@app/gymho",
+    "dev": "lerna run --parallel start --scope=@app/gymho",
+    
     "pretest": "yarn workspace @pwa-manifest/core build-unchecked && yarn workspace parcel-transformer-pwa-manifest build-unchecked && yarn workspace parcel-namer-pwa-manifest build-unchecked",
     "test": "jest && cat ./coverageReport/lcov.info | coveralls"
   },

@@ -11,6 +11,7 @@ import {
 import CustomImg from './CustomImg'
 import ExerciceImg from './ExerciceImg'
 import Timer from './Timer'
+import Footer from './Footer'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -55,7 +56,8 @@ export default function ExerciseCounter() {
                 <CustomImg className={classes.img} />
             </Container>
             <Container align="center">
-                <Timer />
+                <Footer data={<Timer></Timer>}>
+                </Footer>
             </Container>
         </React.Fragment>
     );
