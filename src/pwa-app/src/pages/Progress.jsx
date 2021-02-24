@@ -1,6 +1,6 @@
 import React from 'react';
 import ALayout from '../Layouts/ALayout'
-import BarChart from '../components/BarProcess'
+import YourProgress from '../components/YourProgress';
 import { useExerciseStorage } from '../hooks'
 
 export default function ProgressPage() {
@@ -13,6 +13,6 @@ export default function ProgressPage() {
 
     return (
         // <ALayout main={<ExerciseList updateExercies={updateExercies} data={exercises}></ExerciseList>}></ ALayout>
-        <ALayout main={<BarChart></BarChart>}></ ALayout>
+        <ALayout main={<YourProgress></YourProgress>}></ ALayout>
     );
 }

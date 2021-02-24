@@ -1,6 +1,6 @@
 import { Chart as ChartJS } from 'react-chartjs-2';
 
-ChartJS.elements.Rectangle.prototype.draw = function() {
+ChartJS.elements.Rectangle.prototype.draw = function () {
   const ctx = this._chart.ctx;
   const vm = this._view;
   let left, right, top, bottom, signX, signY, borderSkipped;
@@ -147,7 +147,7 @@ ChartJS.elements.Rectangle.prototype.draw = function() {
 };
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Bar, Line, Pie } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import { Button, Container } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -161,9 +161,9 @@ export default function BarChart() {
   const theme = useTheme();
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
-  const gradient = ctx.createLinearGradient(0, 0, 300, 0);
+  const gradient = ctx.createLinearGradient(300, 0, 300, 300);
   gradient.addColorStop(0, 'black');
-  gradient.addColorStop(1, 'white');
+  gradient.addColorStop(1, '#3fc0c3');
 
   return (
     <Container>
@@ -203,9 +203,18 @@ export default function BarChart() {
           options={{
             cornerRadius: 8,
             maintainAspectRatio: false,
+            legend: {
+              display: false
+            },
             scales: {
+              xAxes: [
+                {
+                  display: false
+                }
+              ],
               yAxes: [
                 {
+                  display: false,
                   ticks: {
                     beginAtZero: true
                   }
