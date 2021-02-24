@@ -49,9 +49,6 @@ const useStyles = makeStyles((theme) => ({
         top: 'auto',
         paddingTop: "2em"
     },
-    main: {
-        paddingTop: "10em",
-    },
     list: {
         width: 250,
     },
