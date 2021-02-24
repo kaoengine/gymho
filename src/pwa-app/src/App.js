@@ -6,11 +6,9 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import SurveyPage from "./pages/Survey"
 
 import {
-    BrowserRouter as Router
-    ,
+    BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
 
 
@@ -26,10 +24,6 @@ export default function App() {
 
         <Router>
             <div>
-               
-
-                {/* A <Switch> looks through its children <Route>s and
-                  renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/activity">
                         <div className={classes.root}>
