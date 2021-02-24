@@ -20,8 +20,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import  Settings from '@material-ui/icons/Settings';
 
-import {Settings} from '@material-ui/icons/'
-import {Test} from '@material-ui/icons/'
 import {
     Link
 } from "react-router-dom";
