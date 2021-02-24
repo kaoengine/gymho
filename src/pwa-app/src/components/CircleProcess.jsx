@@ -11,6 +11,13 @@ import { Container } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex'
+  },
+  title: {
+    color: "#3fc0c3",
+    fontWeight: "bold",
+  },
+  detail: {
+    fontWeight: "bold",
   }
 }));
 
@@ -28,10 +35,10 @@ export default function CircularChart() {
         })}
         >
         <div style={{ marginTop: -41 }}>
-          <h4>Time</h4>
-          <p>120</p>
-          <h4>Calories</h4>
-          <p>85 kcal</p>
+          <h4 className={classes.title}>Time</h4>
+          <p className={classes.detail}>120</p>
+          <h4 className={classes.title}>Calories</h4>
+          <p className={classes.detail}>85 kcal</p>
         </div>
       </CircularProgressbarWithChildren>
     </Container>

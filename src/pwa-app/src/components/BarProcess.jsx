@@ -234,9 +234,9 @@ export default function BarChart() {
         />
       </Container>
       <Container>
-        <Button align="center">Week</Button>
-        <Button className={classes.button} align="center">Month</Button>
-        <Button align="center">Year</Button>
+        <Button>Week</Button>
+        <Button className={classes.button}>Month</Button>
+        <Button>Year</Button>
       </Container>
     </Container>
   );
