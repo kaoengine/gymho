@@ -4,6 +4,7 @@ import ActivityPage from "./pages/Activity"
 import ExcercisePage from './pages/Excercise'
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import SurveyPage from "./pages/Survey"
+import ProgressPage from './pages/Progress';
 
 import {
     BrowserRouter as Router,
@@ -38,8 +39,10 @@ export default function App() {
                 </div>
             </Route>
             <Route path="/process">
-                Hello
-                    </Route>
+                <div className={classes.root}>
+                    <ProgressPage></ProgressPage>
+                </div>
+            </Route>
             <Route path="/">
                 <div className={classes.root}>
                     <ActivityPage></ActivityPage>
