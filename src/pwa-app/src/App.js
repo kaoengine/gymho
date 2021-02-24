@@ -21,36 +21,31 @@ const useStyles = makeStyles((theme) => ({
 export default function App() {
     const classes = useStyles();
     return (
-
-        <Router>
-            <div>
-                <Switch>
-                    <Route path="/activity">
-                        <div className={classes.root}>
-                            <ActivityPage></ActivityPage>
-                        </div>
+        <Switch>
+            <Route path="/activity">
+                <div className={classes.root}>
+                    <ActivityPage></ActivityPage>
+                </div>
+            </Route>
+            <Route path="/excercise">
+                <div className={classes.root}>
+                    <ExcercisePage></ExcercisePage>
+                </div>
+            </Route>
+            <Route path="/survey">
+                <div className={classes.root}>
+                    <SurveyPage></SurveyPage>
+                </div>
+            </Route>
+            <Route path="/process">
+                Hello
                     </Route>
-                    <Route path="/excercise">
-                        <div className={classes.root}>
-                            <ExcercisePage></ExcercisePage>
-                        </div>
-                    </Route>
-                    <Route path="/survey">
-                        <div className={classes.root}>
-                            <SurveyPage></SurveyPage>
-                        </div>
-                    </Route>
-                    <Route path="/process">
-                        Hello
-                    </Route>
-                    <Route path="/">
-                        <div className={classes.root}>
-                            <ActivityPage></ActivityPage>
-                        </div>
-                    </Route>
-                </Switch>
-            </div>
-        </Router>
+            <Route path="/">
+                <div className={classes.root}>
+                    <ActivityPage></ActivityPage>
+                </div>
+            </Route>
+        </Switch>
     );
 
 }
