@@ -48,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
     appBar: {
         top: 'auto',
         paddingTop: "2em"
+    },    
+    main: {
+        paddingTop: "10em",
     },
     list: {
         width: 250,
