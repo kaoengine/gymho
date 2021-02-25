@@ -76,7 +76,7 @@ function generate(classes, updateExercies, data) {
   ));
 }
 
-export default function Î(props) {
+export default function ExerciseList(props) {
   const classes = useStyles();
   const { updateExercies, data } = props;
 
