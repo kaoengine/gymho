@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
         width: "50px",
         borderRadius: "100%",
         fontWeight: "bold",
+        margin: "3px",
     },
     blueTitle: {
         color: "#0D4DA1",
