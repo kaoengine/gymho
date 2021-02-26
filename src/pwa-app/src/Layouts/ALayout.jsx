@@ -123,7 +123,7 @@ export default function ALayout(props) {
         </div>
       </AppBar>
 
-      <SwipeableViews style={{ maxHeight: 'calc(100vh - 218px)' }}
+      <SwipeableViews className={classes.swipeable_views}
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={value}
         onChangeIndex={handleChangeIndex}
