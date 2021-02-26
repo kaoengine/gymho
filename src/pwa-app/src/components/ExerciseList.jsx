@@ -17,6 +17,9 @@ import Paper from '@material-ui/core/Paper';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
+import {
+  Link
+} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -94,8 +97,8 @@ function generate(classes, updateExercies, data) {
           <div className={classes.list}>
             <ListItem className={classes.list}>
               <ListItemAvatar>
-                <Avatar variant="square" className={classes.square}>
-                  <StarBorder />
+                <Avatar variant="square" className={classes.square} src={value.img}>
+                  {/* <StarBorder /> */}
                 </Avatar>
               </ListItemAvatar>
 
@@ -106,6 +109,7 @@ function generate(classes, updateExercies, data) {
 
               <ListItemSecondaryAction>
                 <Fab
+                  component={Link} to={"/excercise"}
                   size="large"
                   variant="round"
                   aria-label="Delete"
