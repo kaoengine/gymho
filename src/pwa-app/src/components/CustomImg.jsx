@@ -10,7 +10,7 @@ import { green, purple } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   media: {
-    height: "350px",
+    height: "400px",
     width: "auto"
   },
 });
