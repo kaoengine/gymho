@@ -13,10 +13,12 @@ const useStyles = makeStyles((theme) => ({
     },
     text: {
         fontSize: '22pt',
-        fontWeight: "bold"
+        fontWeight: "bold",
+        fontFamily:"Heebo"
     },
     question: {
-        marginBottom: '1em'
+        marginBottom: '1em',
+        fontWeight: 900,
     }
 }));
 

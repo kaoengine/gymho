@@ -7,11 +7,11 @@ export default function SurveyQuest(props) {
     const { data } = props
     return (
         <div>
-            <div style={{ marginTop: '2rem' }}>
+            <div style={{ marginTop: '2.8rem' }}>
                 <Question question={data['quest']}></Question>
 
             </div>
-            <div style={{ marginBottom: '6rem' }}>
+            <div style={{ marginBottom: '3rem', marginTop:'1rem' }}>
                 <Answers answers={data['anws']}></Answers>
             </div>
             <Footer data={"2 of 10 questions"}></Footer>

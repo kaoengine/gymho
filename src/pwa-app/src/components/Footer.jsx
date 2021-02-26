@@ -23,20 +23,26 @@ const useStyles = makeStyles((theme) => ({
         margin: '-1.2em'
     },
     text: {
-        fontSize: '18pt',
-        fontWeight: "bold"
+        fontSize: '22px',
+        fontWeight: "900",
+        margin: '3px',
+        fontFamily: 'Heebo'
+    },
+    footerContent: {
+        paddingTop: "5.5em"
     }
 }));
 export default function Footer(props) {
     const { data, allowStyle } = props
     const classes = useStyles();
     return (
-        <div className={allowStyle?classes.footer:classes.footer2}>
+        <div className={allowStyle ? classes.footer : classes.footer2}>
             <Grid
                 container
                 direction="column"
                 justify="space-evenly"
                 alignItems="center"
+                className={classes.footerContent}
             >
                 <Typography className={classes.text}>{data} </Typography>
             </Grid>
