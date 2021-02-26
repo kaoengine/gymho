@@ -43,14 +43,14 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     text: {
-
+        fontWeight: 900,
     },
     appBar: {
         top: 'auto',
         paddingTop: "2em"
     },    
     main: {
-        paddingTop: "10em",
+        paddingTop: "9em",
     },
     list: {
         width: 250,
@@ -120,8 +120,8 @@ export default function BLayout(props) {
                             ))}
                         </Grid>
                         <Grid key={2} item>
-                            <Typography className={classes.text} align="center" variant="h5" gutterBottom>
-                                <Box textAlign="center" fontWeight="fontWeightBold" m={1}>
+                            <Typography className={classes.text} align="center" variant="h5">
+                                <Box  textAlign="center" m={1}>
                                     {title}
                                 </Box>
                             </Typography>

@@ -13,6 +13,6 @@ export default function ExercisePage() {
     // }
 
     return (
-        <BLayout main={<ExerciseCounter></ExerciseCounter>}></ BLayout>
+        <BLayout title={<p>Dumbbell <br />workout</p>} main={<ExerciseCounter></ExerciseCounter>}></ BLayout>
     );
 }

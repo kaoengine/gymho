@@ -69,7 +69,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: '1em'
   },
   swipeable_views: {
-    height: `calc(100vh - 230px)`
+    height: `calc(100vh - 220px)`
   },
   decor_wrapper: {
     background: '#fafafa'
