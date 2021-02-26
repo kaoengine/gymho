@@ -19,11 +19,16 @@ const useStyles = makeStyles((theme) => ({
         color: "#0D4DA1",
         fontWeight: "bold",
         fontSize: "18px",
+        marginBottom: "-0.5em",
     },
     display: {
         color: "#3fc0c3",
         fontWeight: "bold",
         fontSize: "42px",
+        marginBottom: "-0.25em",
+    },
+    text: {
+        marginBottom: "0.5em",
     },
 }));
 
@@ -48,7 +53,7 @@ export default function Timer() {
 
     return (
         <Container className="Timers">
-            <Container>
+            <Container className={classes.text}>
                 {!timerOn && time === 0 && (
                     <Button variant="contained" className={classes.button} onClick={() => setTimerOn(true)}>Start</Button>
                 )}

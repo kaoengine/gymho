@@ -24,7 +24,6 @@ const theme = createMuiTheme({
 export default function CustomImg(props) {
   const classes = useStyles(props);
 
-console.log('aa');
   return (
         <CardMedia className={classes.media}
           image="/custom2.png"

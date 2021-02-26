@@ -21,7 +21,13 @@ const useStyles = makeStyles((theme) => ({
     },
     text: {
         color: "#0D4DA1",
-        fontWeight: 500,
+        fontWeight: 900,
+    },
+    text2: {
+        color: "#0D4DA1",
+        fontWeight: 900,
+        fontSize: "26pt",
+        marginBottom: "-0.5em",
     },
     media: {
         height: 200,
@@ -38,8 +44,10 @@ export default function ExerciseCounter() {
         <React.Fragment>
             <CssBaseline />
             <Container maxWidth="sm">
-                <Typography className={classes.text} align="center" variant="h5" gutterBottom>
-                    Strides <br />
+                <Typography className={classes.text} align="center">
+                    Strides
+                </Typography>
+                <Typography className={classes.text2} align="center">
                     3x15
                 </Typography>
             </Container>
