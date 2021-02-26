@@ -6,6 +6,7 @@ export default function useExerciseStorage(key) {
             "date": '1/28/2021',
             "content": [{
                 "id": "pull",
+                "img": "1",
                 "counter": 0
             },
             {
