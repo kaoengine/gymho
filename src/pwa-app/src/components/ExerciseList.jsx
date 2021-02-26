@@ -131,8 +131,15 @@ export default function ExerciseList(props) {
   const { updateExercies, data } = props;
 
   return (
-    <Paper style={{ maxHeight: 'calc(100vh - 260px)', overflow: 'auto' }}>
+    <Paper style={{ minHeight: 'calc(100vh - 270px)', overflow: 'auto' }}>
       <List
+        style={{
+          minHeight: 'calc(100vh - 270px)',
+          overflow: 'auto',
+          flexDirection: 'column',
+          display: 'flex',
+          justifyContent: 'space-between'
+        }}
         component="nav"
         className={classes.root}
         aria-label="mailbox folders"
