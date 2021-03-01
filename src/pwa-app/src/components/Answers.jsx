@@ -15,14 +15,14 @@ const AnswerButton = withStyles({
         boxShadow: 'none',
         textTransform: 'none',
         fontSize: '3em',
-        width: '17rem',
+        width: '15rem',
         padding: '6px 12px',
         border: '1px solid',
         borderRadius: '3em',
         lineHeight: 1.5,
-        margin: 14,
-        backgroundColor: '#0063cc',
-        borderColor: '#0063cc',
+        margin: 24,
+        background: 'linear-gradient(45deg, #47b4c1 30%, #319dc8 90%)',
+        // borderColor: '#0063cc',
         fontFamily: [
             '-apple-system',
             'BlinkMacSystemFont',
@@ -56,8 +56,10 @@ const useStyles = makeStyles((theme) => ({
         margin: 10
     },
     text: {
-        fontSize: '22pt',
-        fontWeight: "bold"
+        fontSize: '24px',
+        fontWeight: "900",
+        margin: '3px',
+        fontFamily: 'Heebo'
     }
 }));
 export default function Answers(props) {
